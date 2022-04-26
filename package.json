@@ -1,8 +1,8 @@
 {
-  "name": "firebot-custom-script-starter",
-  "scriptOutputName": "starterScript",
+  "name": "firebot-script-emote-wall",
+  "scriptOutputName": "emoteWall",
   "version": "1.0.0",
-  "description": "A starter Firebot custom script",
+  "description": "A Firebot Custom Script show emotes on screen, similar to StreamLabs' Emote Wall or StreamElements' KappaGen",
   "main": "",
   "scripts": {
     "build": "webpack",
@@ -10,7 +10,7 @@
     "copy": "node ./scripts/copy-build.js",
     "test": "jest"
   },
-  "author": "ebiggz",
+  "author": "CheevoSeeker",
   "license": "GNU3",
   "devDependencies": {
     "@types/node": "^14.14.6",
