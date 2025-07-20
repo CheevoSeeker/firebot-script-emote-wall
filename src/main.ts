@@ -13,7 +13,7 @@ const script: Firebot.CustomScript<Params> = {
       name: "Emote Wall",
       description: "Shows chat emotes on screen",
       author: "CheevoSeeker",
-      version: "1.0",
+      version: "1.1",
       website: "https://github.com/CheevoSeeker/firebot-script-emote-wall",
       startupOnly: false,
       firebotVersion: "5"
