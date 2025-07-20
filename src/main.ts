@@ -52,7 +52,7 @@ const script: Firebot.CustomScript<Params> = {
 
     // Parse parameters
     const { emoteUrls, emoteSize, overlayWidth, overlayHeight } = parameters;
-    const emoteUrlArr = emoteUrls.split(",");
+    const emoteUrlArr = JSON.parse(emoteUrls);
     const randomId = "CheevoEmoteWall_" + Date.now();
     if (emoteUrlArr.length <= 0) { return; }
 
