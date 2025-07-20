@@ -1,4 +1,4 @@
-import { Firebot } from "firebot-custom-scripts-types";
+import { Firebot } from "@crowbartools/firebot-custom-scripts-types";
 
 interface Params {
   emoteUrls: string;
@@ -24,22 +24,26 @@ const script: Firebot.CustomScript<Params> = {
       emoteUrls: {
         type: "string",
         description: "URLs of the emotes to show",
-        default: "$chatMessageEmoteUrls"
+        default: "$chatMessageEmoteUrls",
+        title: "Emote URLs"
       },
       emoteSize: {
         type: "number",
         description: "Size of the emotes",
-        default: 64
+        default: 64,
+        title: "Emote Size"
       },
       overlayWidth: {
         type: "number",
         description: "Width of the overlay",
-        default: 1920
+        default: 1920,
+        title: "Overlay Width"
       },
       overlayHeight: {
         type: "number",
         description: "Height of the overlay",
-        default: 1080
+        default: 1080,
+        title: "Overlay Height"
       },
     };
   },
