@@ -1,4 +1,4 @@
-import { Firebot } from "firebot-custom-scripts-types";
+import { Firebot } from "@crowbartools/firebot-custom-scripts-types";
 
 interface Params {
   emoteUrls: string;
@@ -13,7 +13,7 @@ const script: Firebot.CustomScript<Params> = {
       name: "Emote Wall",
       description: "Shows chat emotes on screen",
       author: "CheevoSeeker",
-      version: "1.0",
+      version: "1.1",
       website: "https://github.com/CheevoSeeker/firebot-script-emote-wall",
       startupOnly: false,
       firebotVersion: "5"
@@ -24,22 +24,26 @@ const script: Firebot.CustomScript<Params> = {
       emoteUrls: {
         type: "string",
         description: "URLs of the emotes to show",
-        default: "$chatMessageEmoteUrls"
+        default: "$chatMessageEmoteUrls",
+        title: "Emote URLs"
       },
       emoteSize: {
         type: "number",
         description: "Size of the emotes",
-        default: 64
+        default: 64,
+        title: "Emote Size"
       },
       overlayWidth: {
         type: "number",
         description: "Width of the overlay",
-        default: 1920
+        default: 1920,
+        title: "Overlay Width"
       },
       overlayHeight: {
         type: "number",
         description: "Height of the overlay",
-        default: 1080
+        default: 1080,
+        title: "Overlay Height"
       },
     };
   },
@@ -48,7 +52,7 @@ const script: Firebot.CustomScript<Params> = {
 
     // Parse parameters
     const { emoteUrls, emoteSize, overlayWidth, overlayHeight } = parameters;
-    const emoteUrlArr = emoteUrls.split(",");
+    const emoteUrlArr = JSON.parse(emoteUrls);
     const randomId = "CheevoEmoteWall_" + Date.now();
     if (emoteUrlArr.length <= 0) { return; }
 
